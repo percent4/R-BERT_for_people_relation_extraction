@@ -9,7 +9,7 @@
 - 每一种关系的标注数量如下图:
 
 <p float="left" align="center">
-    <img width="600" src="" />  
+    <img width="600" src="https://raw.githubusercontent.com/percent4/R-BERT_for_people_relation_extraction/master/data/bar_chart.png" />  
 </p>
 
 ## 模型结构
