@@ -35,7 +35,7 @@
 
 ## 运行环境
 
-- python>=3.6
+- python >= 3.6
 - 第三方模块参考: `requiments.txt`
 
 ## 模型训练
@@ -50,7 +50,33 @@ $ python3 main.py --do_train --do_eval
 
 ```bash
 $ python3 evalaute.py
-# weighted avgage F1 = 85.35%
+# Model: chinese-roberta-wwm-ext, weighted avgage F1 = 85.35%
+# Model: chinese-roberta-wwm-ext-large, weighted avgage F1 = 87.22%
+```
+
+Model: chinese-roberta-wwm-ext-large, 详细的评估结果如下：
+
+```
+                precision    recall  f1-score   support
+
+     unknown      0.8756    0.8421    0.8585       209
+         上下级    0.7297    0.8710    0.7941        31
+          亲戚     0.8421    0.6667    0.7442        24
+        兄弟姐妹    0.8333    0.8824    0.8571        34
+          合作     0.9074    0.8305    0.8673        59
+          同人     0.9744    0.9744    0.9744        39
+          同学     0.9130    0.8750    0.8936        24
+          同门     0.9630    1.0000    0.9811        26
+          夫妻     0.8372    0.9114    0.8727        79
+          好友     0.8438    0.9000    0.8710        30
+          师生     0.8378    0.8378    0.8378        37
+          情侣     0.8125    0.8387    0.8254        31
+          父母     0.8931    0.9141    0.9035       128
+          祖孙     0.9545    0.8400    0.8936        25
+
+    accuracy                         0.8724       776
+   macro avg     0.8727    0.8703    0.8696       776
+weighted avg     0.8743    0.8724    0.8722       776
 ```
 
 真实关系文件位于`eval`目录下的`true_answers.txt`，模型预测文件位于`eval`目录下的`proposed_answers.txt`。
