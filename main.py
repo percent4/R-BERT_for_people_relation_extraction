@@ -47,7 +47,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model_name_or_path",
         type=str,
-        default="/nlp_group/nlp_pretrain_models/chinese-roberta-wwm-ext",
+        default="/nlp_group/nlp_pretrain_models/chinese-roberta-wwm-ext-large",
         help="Model Name or Path",
     )
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     parser.add_argument("--eval_batch_size", default=16, type=int, help="Batch size for evaluation.")
     parser.add_argument(
         "--max_seq_len",
-        default=200,
+        default=210,
         type=int,
         help="The maximum total input sequence length after tokenization.",
     )

@@ -16,6 +16,6 @@ def get_label(file_path):
 # model evaluate
 if __name__ == '__main__':
     true_relations = get_label("./eval/true_answer.txt")
-    predict_relations = get_label("./eval/proposed_answers.txt")
+    predict_relations = get_label("./eval/proposed_answers_21_04_01_17_05_28.txt")
     result = classification_report(y_true=true_relations, y_pred=predict_relations, digits=4)
     print(result)

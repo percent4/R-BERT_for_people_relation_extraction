@@ -187,7 +187,9 @@ class Trainer(object):
         eval_loss = eval_loss / nb_eval_steps
         results = {"loss": eval_loss}
         preds = np.argmax(preds, axis=1)
-        write_prediction(self.args, os.path.join(self.args.eval_dir, "proposed_answers.txt"), preds)
+        import datetime
+        write_prediction(self.args, os.path.join(self.args.eval_dir,
+                        "proposed_answers_{}.txt".format(datetime.datetime.now().strftime("%y_%m_%d_%H_%M_%S"))), preds)
 
         result = compute_metrics(preds, out_label_ids)
         results.update(result)

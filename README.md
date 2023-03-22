@@ -50,8 +50,8 @@ $ python3 main.py --do_train --do_eval
 
 ```bash
 $ python3 evalaute.py
-# Model: chinese-roberta-wwm-ext, weighted avgage F1 = 85.35%
-# Model: chinese-roberta-wwm-ext-large, weighted avgage F1 = 87.22%
+# Model: chinese-roberta_chinese-wwm-ext, weighted avgage F1 = 85.35%
+# Model: chinese-roberta_chinese-wwm-ext-large, weighted avgage F1 = 87.22%
 ```
 
 Model: chinese-roberta-wwm-ext-large, 详细的评估结果如下：
@@ -80,6 +80,15 @@ weighted avg     0.8743    0.8724    0.8722       776
 ```
 
 真实关系文件位于`eval`目录下的`true_answers.txt`，模型预测文件位于`eval`目录下的`proposed_answers.txt`。
+
+### 文本增强前后模型效果对比
+
+max_seq_len = 210, 对比指标为weighted avg F1 score.
+
+|-|train avg|
+|---|---|
+|文本增强前|0.8722|
+|文本增强后||
 
 ## 模型预测
 
